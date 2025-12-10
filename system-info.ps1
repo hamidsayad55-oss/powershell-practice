@@ -1,0 +1,7 @@
+﻿Write-Host "System Information"
+Write-Host "-------------------"
+Write-Host "Computer Name: $env:COMPUTERNAME"
+Write-Host "User Name: $env:USERNAME"
+Write-Host "OS Version: $(Get-CimInstance Win32_OperatingSystem).Caption"
+Write-Host "RAM (GB): $([math]::Round((Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory / 1GB, 2))"
+Write-Host "Number of Cores: $(Get-CimInstance Win32_Processor).NumberOfCores"
